@@ -78,12 +78,12 @@ def sel():
     state = rock_paper_scissors(human, computer[0])
 
     txt = f"Computer choice: {computer}\n"
-    if state == 0:
-        game_info.config(text=f"{txt}You lose!")
-    elif state == 0.5:
-        game_info.config(text=f"{txt}Tie game!")
-    else:
-        game_info.config(text=f"{txt}You win!")
+    final = {
+        0 : f"{txt}You lose!",
+        0.5 : f"{txt}Tie game!",
+        1 : f"{txt}You win"
+    }
+    game_info.config(text=final[state])
 
 rock_op = Radiobutton(main_frame, tristatevalue="x", bg=main_frame["bg"], command=sel, text="Rock", font="helvetica 16 bold", value="r", variable=option)
 rock_op.grid(row=0, column=0, sticky=EW)
