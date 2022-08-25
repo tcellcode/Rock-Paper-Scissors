@@ -1,5 +1,7 @@
 from numpy import random
 from tkinter import *
+from PIL import Image, ImageTk
+import os; os.chdir(os.path.dirname(os.path.abspath(__file__))) # change cwd
 
 def rock_paper_scissors(choice1, choice2):
     if choice1 == choice2: return 0.5 # tie
@@ -22,6 +24,7 @@ root.title("Rock Paper Scissors")
 root.geometry("400x300+500+100")
 root.overrideredirect(True)
 
+
 def toggle(event):
     if event.type == EventType.Map:
         root.deiconify()
@@ -34,6 +37,7 @@ top.protocol('WM_DELETE_WINDOW', root.destroy) # close root window if toplevel i
 top.bind("<Map>", toggle)
 top.bind("<Unmap>", toggle)
 top.attributes("-alpha", 0)
+top.iconphoto(False, PhotoImage(file="rock-paper-scissors.png"))
 
 # title bar
 title_bar = Frame(root, bg="#6BE1A8")
@@ -77,7 +81,7 @@ def sel():
     computer = random.choice(["rock", "paper", "scissors"])
     state = rock_paper_scissors(human, computer[0])
 
-    txt = f"Computer choice: {computer}\n"
+    txt = f"Computer choice:\n{computer}\n"
     final = {
         0 : f"{txt}You lose!",
         0.5 : f"{txt}Tie game!",
@@ -93,7 +97,11 @@ sciss_op = Radiobutton(main_frame, tristatevalue="x", bg=main_frame["bg"], comma
 sciss_op.grid(row=2, column=0, sticky=EW)
 
 # label
-game_info = Label(main_frame, text="Welcome!", font="helvetica 16 bold")
+game_info = Label(main_frame, text="Pick one!", font="helvetica 16 bold", bg=main_frame["bg"])
 game_info.grid(row=0, column=1)
+
+render = ImageTk.PhotoImage(Image.open("rock-paper-scissors.png"))
+image = Label(main_frame, image=render,)
+image.grid(row=1, column=1, rowspan=2)
 
 root.mainloop()
