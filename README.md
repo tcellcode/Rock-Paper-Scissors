@@ -1,2 +1,2 @@
 # short-project
-all short project collected by me
+~literally cramp all the code in github cuz my storage is full :<>
