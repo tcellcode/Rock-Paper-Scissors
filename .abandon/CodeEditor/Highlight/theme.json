@@ -1,0 +1,11 @@
+{
+    "theme" : [
+        {
+            "name" : "Sublime Monokai",
+            "text" : "#ffff",
+            "keyword" : "#f92664",
+            "comment" : "#88846f",
+            "string" : "#e6db74"
+        }
+    ]
+}

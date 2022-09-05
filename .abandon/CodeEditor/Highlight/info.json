@@ -1,0 +1,21 @@
+{
+    "info" : [
+        {
+            "language": "Python",
+            "extension": ".py",
+            "keyword" : ["def", "class", "if", "else", "elif", "while", "for", "try", "except", "finally", "with", "return", "break", "continue", "pass", "global", "import", "from", "as", "assert", "del", "raise", "yield", "lambda", "None", "True", "False", "and", "or", "not", "in", "is", "is not", "not in", "==", "!=", "<", ">", "<=", ">=", "=", "+", "-", "*", "/", "%", "//", "**", "~", "^", "<<", ">>", "|", "&", "invert", ">>=", "<<=", "&=", "|=", "^=", "//=", "**=", "%=", "+=", "-=", "*=", "/=", "//=", "**=", "~=", "^=", "==="],
+            "comment": ["#", "//", "\"\"\"", "'''"],
+            "string": ["\"", "'"]
+        },
+        {
+            "language": "C",
+            "extension": ".c",
+            "keyword" : ["auto", "break", "case", "char", "const", "continue", "default", "do", "double", "else", "enum", "extern", "float", "for", "goto", "if", "int", "long", "register", "return", "short", "signed", "sizeof", "static", "struct", "switch", "typedef", "union", "unsigned", "void", "volatile", "while"],
+            "comment": ["//", "/*", "*/"],
+            "string": ["\"", "'"]
+
+        }
+    ]
+    
+       
+}
